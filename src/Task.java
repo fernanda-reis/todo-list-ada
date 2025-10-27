@@ -10,6 +10,7 @@ public class Task {
         this.title = title;
         this.description = description;
         this.deadline = deadline;
+        this.completed = false;
     }
 
     public String getTitle(){
