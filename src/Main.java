@@ -23,7 +23,7 @@ public class Main {
 
             System.out.println("Chosen option: " + option);
 
-            //switch expression - java 17+
+            //switch expression - java 14+
             executing = switch (option) {
                 case 1 -> {
                     System.out.println("Enter the title: ");
@@ -40,24 +40,24 @@ public class Main {
                     yield true;
                 }
                 case 2 -> {
-                    System.out.println("Listar tarefas pendentes");
+                    System.out.println("List pending tasks");
                     yield true;
                 }
                 case 3 -> {
-                    System.out.println("Buscar tarefa por título");
+                    System.out.println("Get task by title");
                     yield true;
                 }
                 case 4 -> {
-                    System.out.println("Marcar tarefa como concluida");
+                    System.out.println("Set task as completed");
                     yield true;
                 }
                 case 5 -> {
-                    System.out.println("Remover uma tarefa");
+                    System.out.println("Remove a task");
                     yield true;
                 }
                 case 0 -> false;
                 default -> {
-                    System.out.println("Opção inválida!");
+                    System.out.println("Invalid option!");
                     yield true;
                 }
             };
