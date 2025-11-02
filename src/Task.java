@@ -1,12 +1,15 @@
 import java.time.LocalDate;
 
 public class Task {
+    private int id;
     private String title;
     private String description;
     private LocalDate deadline;
     private boolean completed;
+    public static int count = 1;
 
     public Task(String title, String description, LocalDate deadline) {
+        this.id = count++;
         this.title = title;
         this.description = description;
         this.deadline = deadline;
@@ -45,10 +48,16 @@ public class Task {
         this.completed = completed;
     }
 
+    public int getId(){
+        return id;
+    }
+
+    public void setId(int id){
+        this.id = id;
+    }
+
     @Override
     public String toString() {
-        return "Task{" +
-                "title='" + title + '\'' +
-                '}';
+        return "["+id+"] " + "Title = " + title + " | Completed? " + completed + " | Deadline = " + deadline;
     }
 }
